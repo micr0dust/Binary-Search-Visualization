@@ -1,0 +1,13 @@
+.array-item {
+    width: 40px; height: 40px; line-height: 40px;
+    border: 1px solid black; margin: 2px;
+    display: flex; justify-content: center; align-items: center;
+    position: relative;
+}
+.found { background-color: aqua !important; }
+.mid { background-color: yellow !important; }
+.left { border-left: 4px solid red !important; }
+.right { border-right: 4px solid blue !important; }
+.highlight-syntax { color: purple; }
+.highlight-var { color: blue; }
+.highlight-config { background: rgb(236, 236, 236); }

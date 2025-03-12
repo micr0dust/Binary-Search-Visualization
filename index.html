@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search Visualization</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous">//jquery</script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous">//bootstrap 4</script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Binary Search Visualization</h2>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="searchValue" placeholder="Enter a number to search" autocomplete="off">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" onclick="startSearch()">search</button>
+                    </div>
+                </div>
+                <button class="btn btn-secondary btn-block" onclick="nextStep()" id="nextBtn" disabled>Next step</button>
+                <div class="input-group mt-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">loop condition</span>
+                    </div>
+                    <input type="text" class="form-control" id="loopCondition" value="left <= right" autocomplete="off">
+                </div>
+                <div class="input-group mt-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">if condition</span>
+                    </div>
+                    <input type="text" class="form-control" id="rightUpdateCond" value="array[mid] >= target" autocomplete="off">
+                </div>
+                <div class="input-group mt-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">right update</span>
+                    </div>
+                    <input type="text" class="form-control" id="rightUpdate" value="right = mid - 1" autocomplete="off">
+                </div>
+                <div class="input-group mt-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">left update</span>
+                    </div>
+                    <input type="text" class="form-control" id="leftUpdate" value="left = mid + 1" autocomplete="off">
+                </div>
+                <div class="input-group mt-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">return</span>
+                    </div>
+                    <input type="text" class="form-control" id="returnValue" value="left" autocomplete="off">
+                </div>
+                <div class="array-container d-flex justify-content-center mt-4" id="array"></div>
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-center">C++ code</h4>
+                <pre class="bg-light p-3 border rounded">
+                    <code id="codeBlock" class="language-cpp"></code>
+                </pre>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
