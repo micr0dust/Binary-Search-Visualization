@@ -32,7 +32,7 @@ function updateCode() {
     const syntax = `<span class="highlight-syntax">`;
 
     codeBlock.innerHTML = `
-${code(`int`, 'var')} binary_search_left(${code(`vector`, 'var')}<${code(`int`, 'var')}> &array, ${code(`int`, 'var')} target) {
+${code(`int`, 'var')} binary_search(${code(`vector`, 'var')}<${code(`int`, 'var')}> &array, ${code(`int`, 'var')} target) {
     ${code(`int`, 'var')} left = 0;
     ${code(`int`, 'var')} right = array.size() - 1;
     ${code(`while`)} (${code(`${loopCondition}`, 'config')}) {
